@@ -1,0 +1,34 @@
+name: Update README Stats
+on:
+  schedule:
+    - cron: '0 * * * *' # Top of every hour
+  workflow_dispatch: # Allow manual triggers
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Update stats
+        run: |
+          # Fetch stats (customize this command)
+          echo "### Updated Stats" > new_readme.md
+          echo "Last updated: $(date)" >> new_readme.md
+          # Add your actual stats commands here
+
+      - name: Update README if changed
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          if ! cmp -s README.md new_readme.md; then
+            mv new_readme.md README.md
+            git config user.name "GitHub Actions"
+            git config user.email "actions@github.com"
+            git add README.md
+            git commit -m "Update stats: $(date +'%Y-%m-%d %H:%M:%S')"
+            git push
+          else
+            echo "No changes detected."
+          fi
