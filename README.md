@@ -24,3 +24,10 @@
 ---
 
 [![](https://visitcount.itsvg.in/api?id=genomicinvader&icon=10&color=13)](https://visitcount.itsvg.in)
+
+
+- name: Generate GitHub stats
+  uses: anuraghazra/github-readme-stats@latest
+  with:
+    github_token: ${{ secrets.GH_TOKEN }}
+    output_file: stats.md
