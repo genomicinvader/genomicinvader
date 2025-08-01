@@ -25,3 +25,7 @@
 
 [![](https://visitcount.itsvg.in/api?id=genomicinvader&icon=10&color=13)](https://visitcount.itsvg.in)
 
+
+
+### My GitHub Stats
+Last updated: <!-- LAST_UPDATED -->
