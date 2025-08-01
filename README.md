@@ -27,5 +27,5 @@
 ![Genomic Invader's GitHub stats](https://github-readme-stats.vercel.app/api?username=genomicinvader&hide=contribs,prs)
 
 ### My GitHub Stats
+
 Last updated: <!-- LAST_UPDATED -->
->>>>>>> f153660e90ed2585f481ab07441a7bf467d83e13
