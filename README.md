@@ -12,7 +12,8 @@
 
 # 📊 GitHub Stats:
 
-![](https://nirzak-streak-stats.vercel.app/?user=genomicinvader&theme=cobalt&hide_border=false)<br/> <br/>
+![Genomic Invader's stats-Dark](https://nirzak-streak-stats.vercel.app/?user=genomicinvader&theme=cobalt&hide_border=false)
+
 [![Genomic Invader's stats-Dark](https://github-readme-stats.vercel.app/api?username=genomicinvader&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage&show_icons=true&theme=dark#gh-dark-mode-only)](https://github-readme-stats.vercel.app/api?username=genomicinvader&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage&show_icons=true&theme=dark#gh-dark-mode-only)
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=genomicinvader&exclude_repo=github-readme-stats,genomicinvader.github.io&langs_count=30)
@@ -32,5 +33,3 @@
 ![Genomic Invader's Contributor Stats](https://github-contributor-stats.vercel.app/api?username=genomicinvader&limit=5&theme=dark&combine_all_yearly_contributions=true)
 
 <br/>
-
-</div>
