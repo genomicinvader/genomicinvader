@@ -25,3 +25,7 @@
 [![](https://visitcount.itsvg.in/api?id=genomicinvader&icon=10&color=13)](https://visitcount.itsvg.in)
 
 ![Genomic Invader's GitHub stats](https://github-readme-stats.vercel.app/api?username=genomicinvader&hide=contribs,prs)
+
+### My GitHub Stats
+
+Last updated: <!-- LAST_UPDATED -->

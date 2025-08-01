@@ -1,8 +1,8 @@
-name: Update README Stats
+name: Update Profile Stats
 on:
   schedule:
-    - cron: '0 * * * *' # Top of every hour
-  workflow_dispatch: # Allow manual triggers
+    - cron: '0 */12 * * *'  # Every 12 hours (at minute 0)
+  workflow_dispatch:         # Allow manual triggers
 
 jobs:
   update-stats:
@@ -11,23 +11,24 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Update stats
+      - name: Generate Stats
         run: |
-          # Fetch stats (customize this command)
-          echo "### Updated Stats" > new_readme.md
-          echo "Last updated: $(date)" >> new_readme.md
-          # Add your actual stats commands here
+          # Customize this section with your stats tools
+          echo "### My GitHub Stats" > new_readme.md
+          echo "Last updated: $(date -u +'%Y-%m-%d %H:%M:%S UTC')" >> new_readme.md
+          echo "![GitHub Stats](https://github-readme-stats.vercel.app/api?username=$GITHUB_ACTOR&show_icons=true)" >> new_readme.md
+          # Add more stats (e.g., languages, streaks, WakaTime, etc.)
 
-      - name: Update README if changed
+      - name: Commit Changes (If Updated)
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Auto-generated token (no PAT needed)
         run: |
           if ! cmp -s README.md new_readme.md; then
             mv new_readme.md README.md
             git config user.name "GitHub Actions"
             git config user.email "actions@github.com"
             git add README.md
-            git commit -m "Update stats: $(date +'%Y-%m-%d %H:%M:%S')"
+            git commit -m "Update stats: $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
             git push
           else
             echo "No changes detected."
